@@ -1,0 +1,8 @@
+<h3>Random Word (attempt #<%= session[:count] %>)</h3>
+<% if !@word.blank? %>
+  <h1><%= @word %></h1>
+  <% else %>
+  <h2>Click Generate to generate a new random word 14 characters long!</h2>
+<% end %>
+<h4><%= link_to 'Generate', new_word_path %></h4>
+<h4><%= link_to 'Reset', reset_path %></h4>
